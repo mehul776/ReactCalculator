@@ -1,0 +1,65 @@
+*,
+*::before,
+::after {
+  box-sizing: border-box;
+}
+body {
+  margin-left: 575px;
+  margin-right: 575px;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #dca887, #5c3202);
+  
+}
+.calculator-grid {
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  
+  display: grid;
+  margin-top: 2rem;
+  grid-template-columns: repeat(4, 6rem);
+  grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
+  justify-content: center;
+}
+.calculator-grid > button {
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px,
+    rgb(209, 213, 219) 0px 0px 0px 1px inset;
+  cursor: pointer;
+  font-size: 2rem;
+  /* border: 1px solid white; */
+  outline: none;
+  background-color: rgb(255, 255, 255);
+}
+.calculator-grid > button:hover {
+  background-color: rgb(17, 117, 180);
+}
+
+.span-two {
+  grid-column: span 2;
+  color: rgb(241, 15, 15);
+}
+.DEL-button {
+  color: brown;
+}
+.output {
+  grid-column: 1/-1;
+  background-color: rgba(99, 58, 6, 0.75);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 0.75rem;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.output .previous {
+  color: rgb(123, 132, 8);
+  font-size: 1.5rem;
+}
+.output .current {
+  color: rgb(240, 240, 47);
+  font-size: 2.5rem;
+}
